@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Daily Plate Restaurant Homepage</title>
-    <link rel="icon" href="The Daily Plate Logo new.PNG" type="image/png">>
+    <link rel="icon" href="The Daily Plate Logo new.PNG" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -12,7 +13,7 @@
             background-color: white;
             color: #333;
             margin: 0;
-            padding: 0; /* Removed padding here to allow full-width elements and custom spacing */
+            padding: 0;
             background: linear-gradient(to bottom, rgb(255, 192, 2), rgb(112, 94, 5));
         }
         img {
@@ -20,32 +21,30 @@
             height: auto;
         }
 
-        /* --- Logo Positioning --- */
         .logo-container {
-            position: absolute; /* Take logo out of normal flow */
-            left: 50%; /* Start at the horizontal center */
-            transform: translateX(-50%); /* Shift left by half its width to truly center */
-            top: 20px; /* Distance from the top of the viewport */
-            z-index: 100; /* Ensure logo is on top of everything */
-            width: 200px; /* Set a specific width for your logo */
-            height: 200px; /* Set a specific height for your logo */
-            overflow: hidden; /* Important to clip the circular logo image if it's square */
-            border-radius: 50%; /* Apply circular shape to the container */
-            border: 2px solid #e0e0e0; /* Border for the logo container */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Soft shadow for depth */
-            background-color: white; /* Ensure a background for the circular area */
-            display: flex; /* Use flex to perfectly center the image inside */
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            top: 20px; 
+            z-index: 100; 
+            width: 200px;
+            height: 200px;  
+            overflow: hidden;  
+            border-radius: 50%;  
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+            background-color: white; 
+            display: flex; 
             justify-content: center;
             align-items: center;
         }
         .logo-container img {
-            width: 100%; /* Make image fill its container */
-            height: 100%; /* Make image fill its container */
-            object-fit: contain; /* Ensure the whole logo is visible within the circle without cropping */
-            border-radius: 50%; /* Keep image itself circular if it already is */
+            width: 100%;  
+            height: 100%;  
+            object-fit: contain;  
+            border-radius: 50%;  
         }
 
-        /* --- Header Banner --- */
         .header-banner {
             position: relative;
             height: 550px;
@@ -53,8 +52,7 @@
             background-image: url('https://www.timeoutdubai.com/cloud/timeoutdubai/2024/05/31/L32NbHBO-Coucher-de-Soleil-by-Twiggy-by-La-Cantine-5-800x600.jpg');
             background-size: cover;
             background-position: center;
-            /* Push the banner down to make space for the absolutely positioned logo */
-            margin-top: 100px; /* Adjust this value based on logo height and desired overlap/spacing */
+            margin-top: 100px;  
         }
         .overlay {
             position: absolute;
@@ -62,7 +60,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Darker overlay for text readability */
+            background: rgba(0, 0, 0, 0.3); 
         }
         .header-content {
             position: absolute;
@@ -75,12 +73,12 @@
             max-width: 800px;
             width: 90%;
             box-sizing: border-box;
-            z-index: 1; /* Ensure content is above overlay */
+            z-index: 1;  
         }
         .header-content h1 {
-            font-size: 48px; /* Larger, more impactful */
+            font-size: 48px;  
             margin: 0 0 15px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* Stronger shadow for readability */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);  
         }
         .header-content p {
             font-size: 16px;
@@ -88,12 +86,11 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
-        /* --- Main Navigation within the banner --- */
         .header-content nav {
             display: flex;
             justify-content: center;
-            margin-top: 30px; /* More space below text */
-            background-color: rgba(0,0,0,0.5); /* Semi-transparent background for nav */
+            margin-top: 30px;
+            background-color: rgba(0,0,0,0.5); 
             padding: 10px 20px;
             border-radius: 5px;
         }
@@ -104,24 +101,22 @@
             margin: 0 5px;
             font-weight: bold;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border-bottom: none; /* Remove previous border-bottom */
+            border-bottom: none; 
         }
         .header-content nav a:hover {
-            background-color: #ffa726; /* Highlight on hover */
-            color: #111; /* Darker text on hover */
+            background-color: #ffa726;  
+            color: #111;  
         }
-
-        /* --- Project Cards (Main Section) --- */
         main {
             padding: 20px;
-            max-width: 1200px; /* Constrain main content width */
-            margin: 0 auto; /* Center main content */
+            max-width: 1200px;  
+            margin: 0 auto; 
         }
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            padding: 20px; /* Padding around the grid, within main */
+            padding: 20px; 
         }
         .project-card {
             padding: 20px;
@@ -156,8 +151,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .project-card img:hover{
-            transform: scale(1.03); /* Removed this from here, applied on parent hover */
-        }
+            transform: scale(1.03); 
         .project-card h2 {
             margin-top: 0;
             margin-bottom: 10px;
@@ -178,7 +172,6 @@
             font-size: 14px;
             border-top: 1px solid #333;
             text-align: center;
-            /* height: 340px; Removed fixed height */
         }
         .footer-main {
             background: #232f3e;
@@ -235,43 +228,15 @@
             font-size: 14px;
         }
 
-        /* --- Responsive adjustments --- */
-        @media (max-width: 768px) {
-            .logo-container {
-                width: 150px; /* Smaller logo on small screens */
-                height: 150px;
-                top: 10px;
-            }
-            .header-banner {
-                margin-top: 80px; /* Adjust banner margin for smaller logo */
-                height: 400px; /* Smaller banner height */
-            }
-            .header-content h1 {
-                font-size: 2.5em;
-            }
-            .header-content p {
-                font-size: 1em;
-            }
-            .header-content nav {
-                flex-wrap: wrap;
-                margin-top: 15px;
-                padding: 5px 10px;
-            }
-            .header-content nav a {
-                margin: 5px;
-                padding: 8px 12px;
-            }
-            .projects {
-                grid-template-columns: 1fr; /* Stack cards on small screens */
-                padding: 10px;
-            }
-            .footer-container {
+        @media (max-width: 600px) {
+            .item-order-actions {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
+                gap: 10px;
             }
-            .footer-col {
-                margin: 15px 0;
-                text-align: center;
+            .item-order-actions button {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
