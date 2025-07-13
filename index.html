@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Daily Plate Restaurant Homepage</title>
     <link rel="icon" href="The Daily Plate Logo new.PNG" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body {
+       body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             background-color: white;
@@ -164,8 +164,10 @@
             font-size: 16px;
             line-height: 1.4;
         }
-
-        /* --- Footer --- */
+        .project-card a:hover {
+            text-decoration: underline;
+            color: #ffa726;
+        }
         footer {
             background-color: #111;
             color: #ccc;
@@ -228,17 +230,41 @@
             padding: 10px 0 20px 0;
             font-size: 14px;
         }
-
-        @media (max-width: 600px) {
-            .item-order-actions {
+        @media screen and (max-width: 768px) {
+            .header-banner {
+                height: 750px; 
+            }
+            .header-content h1 {
+                margin-top: 150px;
+                font-size: 36px;  
+            }
+            .header-content p {
+                font-size: 14px;  
+            }
+            .header-content nav {
+                flex-direction: column; 
+                text-align: center;
+            }
+            .header-content nav a {
+                margin: 5px 0; 
+                padding: 10px 15px; 
+            }
+            .projects {
+                grid-template-columns: 1fr; 
+            }
+            .project-card {
+                margin: 0 auto; 
+                width: 90%; 
+            }
+            .footer-container {
                 flex-direction: column;
-                align-items: stretch;
-                gap: 10px;
+                align-items: center;
             }
-            .item-order-actions button {
-                width: 100%;
-                justify-content: center;
+            .footer-col {
+                text-align: center;
+                margin-bottom: 20px;
             }
+            
         }
     </style>
 </head>
@@ -268,17 +294,17 @@
         <div class="projects">
             <div class="project-card">
                 <img src="https://premiumfoodgroup.de/wp-content/uploads/2024/11/240126_Animation_1_Ebene-1.jpg" alt="Foods">
-                <h2><a href="noodles.html">Foods</a></h2>
+                <h2><a href="foods.html">Foods</a></h2>
                 <p>Explore a variety of delicious food at great prices.</p>
             </div>
             <div class="project-card">
                 <img src="https://boulevardsg.com/wp-content/uploads/2024/11/set-of-different-sophisticated-cocktails-with-fres-2024-11-07-22-24-06-utc-1-scaled.webp" alt="Drinks">
-                <h2><a href="drinks.html">Drinks</a></h2>
+                <h2><a href="Drinks.html">Drinks</a></h2>
                 <p>Explore a variety of delicious drinks at great prices.</p>
             </div>
             <div class="project-card">
                 <img src="https://images.jjbuckley.com/froala/The%20Wine%20_%20Food%20Pairing%20Story_%20A%20Quick%20History.jpg" alt="Wines">
-                <h2><a href="snacks.html">Wines</a></h2>
+                <h2><a href="Wines.html">Wines</a></h2>
                 <p>Explore a variety of delicious wines at great prices.</p>
             </div>
         </div>
